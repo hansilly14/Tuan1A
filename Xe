@@ -1,0 +1,56 @@
+
+public class Xe {
+	String Tenchuxe,Loaixe;
+	int Dungtich;
+	double TriGia;
+	public Xe(String Tenchuxe, String Loaixe, int Dungtich, double TriGia) {
+		this.Tenchuxe=Tenchuxe;
+		this.Loaixe=Loaixe;
+		this.Dungtich=Dungtich;
+		this.TriGia=TriGia;
+	}
+	
+	public String getTenchuxe() {
+		return Tenchuxe;
+	}
+
+	public void setTenchuxe(String tenchuxe) {
+		Tenchuxe = tenchuxe;
+	}
+
+	public String getLoaixe() {
+		return Loaixe;
+	}
+
+	public void setLoaixe(String loaixe) {
+		Loaixe = loaixe;
+	}
+
+	public int getDungtich() {
+		return Dungtich;
+	}
+
+	public void setDungtich(int dungtich) {
+		Dungtich = dungtich;
+	}
+
+	public double getTriGia() {
+		return TriGia;
+	}
+	public void setTriGia(double triGia) {
+		TriGia = triGia;
+	}
+	public double Giaphainop() {
+        int tax;
+        if (Dungtich < 100) {
+            tax = (int) (TriGia * 0.01);
+        } else if (Dungtich < 200) {
+            tax = (int) (TriGia * 0.03);
+        } else {
+            tax = (int) (TriGia * 0.05);
+        }
+        return tax;
+    }
+	
+
+}
