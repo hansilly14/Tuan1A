@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+	public class Danhsach {
+	    private ArrayList<Xe> XE;
+
+	    public Danhsach() {
+	        XE = new ArrayList<Xe>();
+	    }
+
+	    public void addVehicle(Xe xe) {
+	        XE.add(xe);
+	    }
+
+	    public void displayVehicleList() {
+	        System.out.printf(String.format("|%-20s |%-20s |%-20s |%-20s| %-20s\n", "Ten chu xe", "Loai xe", "Dung tich", "Tri Gia","Gia phai nop"));
+	        for (Xe xe :XE ) {
+	            System.out.printf(String.format("|%-20s |%-20s| %-20d| %-20.2f |%-20.2f\n",
+	                   xe.getTenchuxe() , xe.getLoaixe(), xe.getDungtich(),xe.getTriGia() ,xe.Giaphainop()));
+	        }
+	    }
+
+	    public double Giaphainop() {
+	        int tax = 0;
+	        for (Xe xe : XE) {
+	            tax += xe.Giaphainop();
+	        }
+	        return tax;
+	    }
+	}
+
+
